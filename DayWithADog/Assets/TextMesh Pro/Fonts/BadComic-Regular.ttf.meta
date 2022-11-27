@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 38df413f34c1ca146b5c72e49e1e2248
+guid: fd0578e05ba502545825a4b64c45f25e
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -11,7 +11,7 @@ TrueTypeFontImporter:
   fontNames:
   - Bad Comic
   fallbackFontReferences:
-  - {fileID: 12800000, guid: 75ada93652d0c69449cd1257a4480ece, type: 3}
+  - {fileID: 12800000, guid: 38460d431c34b0f41aa306e6888c99a5, type: 3}
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1
