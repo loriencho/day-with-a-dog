@@ -16,12 +16,6 @@ public class GameEventManager : MonoBehaviour
         for (int i = 0; i< _gameEvents.Count; i++){
             gameEvents.Add(_gameEvents[i].name, _gameEvents[i]);
         }
-        Debug.Log(gameEvents);
-        foreach (KeyValuePair<string, GameEvent> kvp in gameEvents)
-        {
-            //textBox3.Text += ("Key = {0}, Value = {1}", kvp.Key, kvp.Value);
-            Debug.Log("Key = " + kvp.Key + "Value = " + kvp.Value);
-        }
         gameEvents["StartNameChoose"].Raise();
     
     }
