@@ -13,6 +13,8 @@ public class BackgroundController : MonoBehaviour
     private List<Sprite> _backgrounds; 
     private Dictionary<string, Sprite> backgrounds = new Dictionary<string, Sprite>();
 
+    private int index = 0;
+
     // Start is called before the first frame update
     void Start()
     {  
@@ -20,12 +22,22 @@ public class BackgroundController : MonoBehaviour
             backgrounds.Add(_backgrounds[i].name, _backgrounds[i]);
         }
 
-        // setBackground("Kitchen");
+        setBackgroundString("bg");
     
     }
 
-    public void setBackground(string backgroundName){
+    public void setBackgroundString(string backgroundName){
         backgroundImage.sprite = backgrounds[backgroundName];
+    }
+
+    public void increaseBackground(){
+        index = ( index + 1 ) % (_backgrounds.Count-1);
+        backgroundImage.sprite = _backgrounds[index];
+    }
+
+    public void decreaseBackground(){
+        index = ( index - 1 ) % (_backgrounds.Count - 1);
+        backgroundImage.sprite = _backgrounds[index];
     }
 
 }

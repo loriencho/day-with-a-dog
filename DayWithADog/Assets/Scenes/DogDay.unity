@@ -155,7 +155,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1568596212}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -185,7 +185,7 @@ MonoBehaviour:
   m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c7c64e6650d97a14894975bfbdc963a2, type: 2}
-  m_sharedMaterial: {fileID: -5031401619445788534, guid: c7c64e6650d97a14894975bfbdc963a2, type: 2}
+  m_sharedMaterial: {fileID: 0}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -248,7 +248,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &16431611
@@ -728,7 +728,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 346897679}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 417678657}
+        m_TargetAssemblyTypeName: BackgroundController, Assembly-CSharp
+        m_MethodName: decreaseBackground
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &346897679
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -828,7 +840,7 @@ MonoBehaviour:
   m_text: are you sure?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c7c64e6650d97a14894975bfbdc963a2, type: 2}
-  m_sharedMaterial: {fileID: -5031401619445788534, guid: c7c64e6650d97a14894975bfbdc963a2, type: 2}
+  m_sharedMaterial: {fileID: -7593186125749276214, guid: c7c64e6650d97a14894975bfbdc963a2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -989,8 +1001,8 @@ GameObject:
   - component: {fileID: 417678656}
   - component: {fileID: 417678660}
   - component: {fileID: 417678659}
-  - component: {fileID: 417678658}
   - component: {fileID: 417678657}
+  - component: {fileID: 417678661}
   m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
@@ -1006,17 +1018,17 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 417678655}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1568596212}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -0.002533, y: -0.0024796}
+  m_SizeDelta: {x: 1138.5, y: 519.49}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &417678657
 MonoBehaviour:
@@ -1030,24 +1042,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d608dd4141bfa8f44bdc6aef7aeeddbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  image: {fileID: 417678659}
-  _backgrounds: []
---- !u!114 &417678658
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 417678655}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e354cda026f1aec4484861247ebd53a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 0}
-  Response:
-    m_PersistentCalls:
-      m_Calls: []
+  backgroundImage: {fileID: 417678659}
+  _backgrounds:
+  - {fileID: 21300000, guid: b53d4826b90064b4e955998e7661b7b7, type: 3}
+  - {fileID: 21300000, guid: 9595c1f8eb60e6e449dc52f06bca3deb, type: 3}
+  - {fileID: 21300000, guid: 91abbf50c22acc141a54d027b65a0aaa, type: 3}
+  - {fileID: 21300000, guid: 848eba370026b714992a367a306e20c2, type: 3}
 --- !u!114 &417678659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1086,6 +1086,34 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 417678655}
   m_CullTransparentMesh: 1
+--- !u!114 &417678661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 417678655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e354cda026f1aec4484861247ebd53a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 4ac4248fa489b4246be56f51d951c19c, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 417678657}
+        m_TargetAssemblyTypeName: BackgroundController, Assembly-CSharp
+        m_MethodName: setBackground
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: bg
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &476626107
 GameObject:
   m_ObjectHideFlags: 0
@@ -1102,7 +1130,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &476626108
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1120,7 +1148,7 @@ RectTransform:
   - {fileID: 2051467036}
   - {fileID: 2009184556}
   m_Father: {fileID: 1568596212}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1202,7 +1230,7 @@ MonoBehaviour:
   m_text: "\u200B"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d7899cf6336a9794eb09f12e29ad6361, type: 2}
-  m_sharedMaterial: {fileID: -4833634393224633715, guid: d7899cf6336a9794eb09f12e29ad6361, type: 2}
+  m_sharedMaterial: {fileID: 4600171268407748589, guid: d7899cf6336a9794eb09f12e29ad6361, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1373,6 +1401,7 @@ GameObject:
   - component: {fileID: 817739930}
   - component: {fileID: 817739931}
   - component: {fileID: 817739929}
+  - component: {fileID: 817739932}
   m_Layer: 0
   m_Name: GameEventManager
   m_TagString: Untagged
@@ -1411,6 +1440,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4ac4248fa489b4246be56f51d951c19c, type: 2}
   - {fileID: 11400000, guid: 815c5aa7127e3c945854dcbb9c191daf, type: 2}
   - {fileID: 11400000, guid: a0d13f5be7a7c1d4ca1bf51b31f73002, type: 2}
+  - {fileID: 11400000, guid: 803decdb6e10a814abae8c80b4cc2583, type: 2}
 --- !u!114 &817739929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1461,6 +1491,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 817739928}
+        m_TargetAssemblyTypeName: GameEventManager, Assembly-CSharp
+        m_MethodName: RaiseEvent
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: StartDay
           m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &817739930
@@ -1615,6 +1657,46 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &817739932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 817739926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e354cda026f1aec4484861247ebd53a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 803decdb6e10a814abae8c80b4cc2583, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 417678657}
+        m_TargetAssemblyTypeName: BackgroundController, Assembly-CSharp
+        m_MethodName: setBackgroundString
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: kitchen
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1469569680}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1 &1039209819
 GameObject:
   m_ObjectHideFlags: 0
@@ -1646,7 +1728,7 @@ RectTransform:
   - {fileID: 2114014372}
   - {fileID: 346897677}
   m_Father: {fileID: 1568596212}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2015,16 +2097,16 @@ RectTransform:
   m_GameObject: {fileID: 1469569680}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1568596212}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -100}
-  m_SizeDelta: {x: 164.83, y: 164.83}
+  m_AnchoredPosition: {x: -320, y: -176.05}
+  m_SizeDelta: {x: 259.85, y: 167.39}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1469569682
 MonoBehaviour:
@@ -2046,7 +2128,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7178f21af77b4db419193e5df4a95d4d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 304f777e445470a448c482f6a4c3a898, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2168,11 +2250,11 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 417678656}
   - {fileID: 1039209820}
   - {fileID: 16431609}
   - {fileID: 476626108}
   - {fileID: 1469569681}
-  - {fileID: 417678656}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2384,7 +2466,7 @@ MonoBehaviour:
   m_text: Enter text...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d7899cf6336a9794eb09f12e29ad6361, type: 2}
-  m_sharedMaterial: {fileID: -4833634393224633715, guid: d7899cf6336a9794eb09f12e29ad6361, type: 2}
+  m_sharedMaterial: {fileID: 4600171268407748589, guid: d7899cf6336a9794eb09f12e29ad6361, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2540,7 +2622,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2114014374}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 417678657}
+        m_TargetAssemblyTypeName: BackgroundController, Assembly-CSharp
+        m_MethodName: increaseBackground
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2114014374
 MonoBehaviour:
   m_ObjectHideFlags: 0
