@@ -51,12 +51,13 @@ public class DogBehavior : MonoBehaviour
                 setRandomIdle(50);
                 transform.localScale = new Vector3(1, transform.localScale.y, transform.localScale.z);
             }
+            else if (rt.anchoredPosition.x == 0){
+                setRandomIdle(50);
+            }
             else if (rt.anchoredPosition.x  <= -320f){
                 movingDirection = Right;
                 setRandomIdle(50);
                 transform.localScale = new Vector3(-1, transform.localScale.y, transform.localScale.z);
-
-
             }
             rt.anchoredPosition = new Vector2(rt.anchoredPosition.x + (2f * movingDirection), -150f);
         }

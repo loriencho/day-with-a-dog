@@ -5,20 +5,14 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static string DogName { get; private set; }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public static string Background { get; private set; }
 
     public static void setDogName(string dogName){
         DogName = dogName; 
+    }
+
+    public static void changeLocation(string background){
+        Background = background; 
     }
 
 }

@@ -33,11 +33,16 @@ public class BackgroundController : MonoBehaviour
     public void increaseBackground(){
         index = ( index + 1 ) % (_backgrounds.Count-1);
         backgroundImage.sprite = _backgrounds[index];
+        GameManager.changeLocation(backgroundImage.sprite.name);
+
     }
 
     public void decreaseBackground(){
         index = ( index - 1 ) % (_backgrounds.Count - 1);
+        if (index < 0)
+            index = _backgrounds.Count - 2;
         backgroundImage.sprite = _backgrounds[index];
-    }
+        GameManager.changeLocation(backgroundImage.sprite.name);
 
+    }
 }
