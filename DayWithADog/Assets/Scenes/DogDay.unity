@@ -900,12 +900,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1469569684}
-        m_TargetAssemblyTypeName: DogBehavior, Assembly-CSharp
+        m_TargetAssemblyTypeName: DogBehavior, Scripts
         m_MethodName: Act
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 11400000, guid: 75ca3d5f60f980349a7637e7faeb125c, type: 2}
-          m_ObjectArgumentAssemblyTypeName: DogAction, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: DogAction, Scripts
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1728,12 +1728,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1469569684}
-        m_TargetAssemblyTypeName: DogBehavior, Assembly-CSharp
+        m_TargetAssemblyTypeName: DogBehavior, Scripts
         m_MethodName: Act
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 11400000, guid: 19f929e32f2490541b5328f0907d506d, type: 2}
-          m_ObjectArgumentAssemblyTypeName: DogAction, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: DogAction, Scripts
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2756,12 +2756,12 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 476626109}
-        m_TargetAssemblyTypeName: PopupManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: PopupManager, Scripts
         m_MethodName: SetPopup
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 11400000, guid: a9f2963f072628f40ac03cff460900a2, type: 2}
-          m_ObjectArgumentAssemblyTypeName: Popup, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: Popup, Scripts
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2916,12 +2916,12 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 476626109}
-        m_TargetAssemblyTypeName: PopupManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: PopupManager, Scripts
         m_MethodName: SetPopup
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 11400000, guid: 6896b00b691605448b297c39447db2ae, type: 2}
-          m_ObjectArgumentAssemblyTypeName: Popup, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: Popup, Scripts
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3084,12 +3084,12 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 476626109}
-        m_TargetAssemblyTypeName: PopupManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: PopupManager, Scripts
         m_MethodName: SetPopup
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 11400000, guid: 09ec3b2b860dbe54c8e47b1271d4745b, type: 2}
-          m_ObjectArgumentAssemblyTypeName: Popup, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: Popup, Scripts
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3963,12 +3963,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1469569684}
-        m_TargetAssemblyTypeName: DogBehavior, Assembly-CSharp
+        m_TargetAssemblyTypeName: DogBehavior, Scripts
         m_MethodName: Act
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 11400000, guid: 05cd19e6f7e3a684c81e30c8a2c37890, type: 2}
-          m_ObjectArgumentAssemblyTypeName: DogAction, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: DogAction, Scripts
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
