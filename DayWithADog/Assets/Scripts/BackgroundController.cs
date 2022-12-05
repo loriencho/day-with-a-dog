@@ -17,7 +17,7 @@ public class BackgroundController : MonoBehaviour
     private List<Sprite> _backgrounds; 
     private Dictionary<string, Sprite> backgrounds = new Dictionary<string, Sprite>();
 
-    private int index = 0;
+    public static int index = 0;
 
     private static string _background;
     public static string Background {get {return _background;}}
