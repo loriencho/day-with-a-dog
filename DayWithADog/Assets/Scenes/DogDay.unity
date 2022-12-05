@@ -851,10 +851,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rt: {fileID: 192721429}
-  position: {x: -490, y: -48}
-  room: bedroom
   image: {fileID: 192721430}
   button: {fileID: 192721433}
+  position: {x: -490, y: -48}
+  room: bedroom
 --- !u!114 &192721433
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1466,6 +1466,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 9595c1f8eb60e6e449dc52f06bca3deb, type: 3}
   - {fileID: 21300000, guid: 91abbf50c22acc141a54d027b65a0aaa, type: 3}
   - {fileID: 21300000, guid: 848eba370026b714992a367a306e20c2, type: 3}
+  index: 0
 --- !u!114 &417678659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1679,10 +1680,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rt: {fileID: 497000171}
-  position: {x: -500, y: 40}
-  room: kitchen
   image: {fileID: 497000172}
   button: {fileID: 497000176}
+  position: {x: -500, y: 40}
+  room: kitchen
 --- !u!114 &497000176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1968,6 +1969,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: StartNameChoose
           m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1153470084}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &525780240
 MonoBehaviour:
@@ -2651,6 +2664,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a0d13f5be7a7c1d4ca1bf51b31f73002, type: 2}
   - {fileID: 11400000, guid: 803decdb6e10a814abae8c80b4cc2583, type: 2}
   - {fileID: 11400000, guid: e520436dabe1bb64ea45981d3670b8cb, type: 2}
+  - {fileID: 11400000, guid: 0cddc61c2d787dc4393664a73cb2be4a, type: 2}
 --- !u!114 &817739929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2852,6 +2866,18 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1469569680}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1153470084}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -3329,6 +3355,139 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1085859746}
+  m_CullTransparentMesh: 1
+--- !u!1 &1153470084
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1153470085}
+  - component: {fileID: 1153470088}
+  - component: {fileID: 1153470087}
+  - component: {fileID: 1153470086}
+  m_Layer: 5
+  m_Name: GoBack
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1153470085
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1153470084}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1568596212}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -522.3, y: 221.5}
+  m_SizeDelta: {x: 52.39, y: 54.41}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1153470086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1153470084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1153470087}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 817739928}
+        m_TargetAssemblyTypeName: GameEventManager, Scripts
+        m_MethodName: RaiseEvent
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: AllActionsDone
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1153470087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1153470084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 22b9ccd38cd43cf44b7f02fc86ea9d18, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1153470088
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1153470084}
   m_CullTransparentMesh: 1
 --- !u!1 &1272214975
 GameObject:
@@ -3914,10 +4073,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rt: {fileID: 1419127842}
-  position: {x: -500, y: 120}
-  room: backyard
   image: {fileID: 1419127843}
   button: {fileID: 1419127846}
+  position: {x: -500, y: 120}
+  room: backyard
 --- !u!114 &1419127846
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4252,6 +4411,7 @@ RectTransform:
   - {fileID: 1469569681}
   - {fileID: 476626108}
   - {fileID: 21861136}
+  - {fileID: 1153470085}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -20,20 +20,20 @@ public class background_controller_tests
     public IEnumerator background_index_goes_negative_and_loops()
     {
         BackgroundController backgroundController = GameObject.Find("Background").GetComponent<BackgroundController>();
-        BackgroundController.index = 0;
+        backgroundController.index = 0;
         backgroundController.decreaseBackground();
         yield return null;
-        Assert.AreEqual(2, BackgroundController.index);
+        Assert.AreEqual(2, backgroundController.index);
     }
 
     [UnityTest]
     public IEnumerator background_index_goes_above_background_count_and_loops()
     {
         BackgroundController backgroundController = GameObject.Find("Background").GetComponent<BackgroundController>();
-        BackgroundController.index = 2;
+        backgroundController.index = 2;
         backgroundController.increaseBackground();
         yield return null;
-        Assert.AreEqual(0, BackgroundController.index);
+        Assert.AreEqual(0, backgroundController.index);
     }
 
 
@@ -41,19 +41,19 @@ public class background_controller_tests
     public IEnumerator background_index_increases_normally()
     {
         BackgroundController backgroundController = GameObject.Find("Background").GetComponent<BackgroundController>();
-        BackgroundController.index = 0;
+        backgroundController.index = 0;
         backgroundController.increaseBackground();
         yield return null;
-        Assert.AreEqual(1, BackgroundController.index);
+        Assert.AreEqual(1, backgroundController.index);
     }
 
     [UnityTest]
     public IEnumerator background_index_decreases_normally()
     {
         BackgroundController backgroundController = GameObject.Find("Background").GetComponent<BackgroundController>();
-        BackgroundController.index = 1;
+        backgroundController.index = 1;
         backgroundController.decreaseBackground();
         yield return null;
-        Assert.AreEqual(0, BackgroundController.index);
+        Assert.AreEqual(0, backgroundController.index);
     }
 }
