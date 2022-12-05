@@ -6,9 +6,9 @@ using TMPro;
 public class PopupManager : MonoBehaviour
 { 
     [SerializeField]
-    private TextMeshProUGUI titleTMP;
+    public TextMeshProUGUI titleTMP;
     [SerializeField]
-    private RectTransform backgroundRt; 
+    public RectTransform backgroundRt; 
     
     public void SetPopup(Popup popup){
         titleTMP.text = popup.title;
