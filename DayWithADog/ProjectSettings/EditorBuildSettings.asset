@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DogDay.unity
     guid: 9a264d352bf2ed94f9bbf62053e7f1fb
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 13368e023d2047141a8d22f518ec5f31
   m_configObjects: {}

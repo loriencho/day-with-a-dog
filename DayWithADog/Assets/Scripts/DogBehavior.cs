@@ -78,9 +78,10 @@ public class DogBehavior : MonoBehaviour {
     }
 
     IEnumerator FinishDogAction(DogAction dogAction){
+        GameObject actionItem = GameObject.Find(dogAction.actionItemName);
         yield return new WaitForSeconds(2f);
         isIdle = true;
-        GameObject.Find(dogAction.actionItemName).SetActive(false);
+        actionItem.SetActive(false);
         dogActionsToDo.Remove(dogAction);
 
         if(dogActionsToDo.Count == 0){
