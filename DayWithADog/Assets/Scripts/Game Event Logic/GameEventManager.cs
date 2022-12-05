@@ -25,4 +25,9 @@ public class GameEventManager : MonoBehaviour
         gameEvents[eventName].Raise();
 
     }
+
+    public void restartGame(){
+        Scene scene = SceneManager.GetActiveScene(); 
+        SceneManager.LoadScene("Menu");
+    }
 }
