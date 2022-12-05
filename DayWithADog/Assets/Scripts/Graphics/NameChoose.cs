@@ -9,7 +9,7 @@ public class NameChoose : MonoBehaviour
     public static string DogName { get{return _dogName; } }
 
     [SerializeField]
-    TMP_InputField inputField;
+    public TMP_InputField inputField;
     
     public void setDogNameToInput(){
         _dogName = inputField.text;
