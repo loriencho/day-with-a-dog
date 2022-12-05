@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.TestTools;
+using UnityEngine.SceneManagement;
 
 public class choose_name_tests
 {
@@ -10,16 +11,18 @@ public class choose_name_tests
     [Test]
     public void choose_name_testsSimplePasses()
     {
-        // Use the Assert class to test conditions
+        SceneManager.LoadScene("DogDay");
     }
 
     // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
     // `yield return null;` to skip a frame.
     [UnityTest]
-    public IEnumerator choose_name_testsWithEnumeratorPasses()
+    public IEnumerator choose_name_dogName_matches_input()
     {
-        // Use the Assert class to test conditions.
-        // Use yield to skip a frame.
+        NameChoose nameChoose = GameObject.Find("NameChoose").GetComponent<NameChoose>();
+        nameChoose.setDogNameToInput();
         yield return null;
+        // Assert.AreEqual(NameChoose.inputField.text, NameChoose._dogName);
     }
+
 }

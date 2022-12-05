@@ -5,7 +5,7 @@ using TMPro;
 
 public class NameChoose : MonoBehaviour
 {
-    private static string _dogName;
+    public static string _dogName;
     public static string DogName { get{return _dogName; } }
 
     [SerializeField]
