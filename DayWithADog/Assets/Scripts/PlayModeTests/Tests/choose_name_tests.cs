@@ -22,7 +22,7 @@ public class choose_name_tests
         NameChoose nameChoose = GameObject.Find("NameChoose").GetComponent<NameChoose>();
         nameChoose.setDogNameToInput();
         yield return null;
-        // Assert.AreEqual(NameChoose.inputField.text, NameChoose._dogName);
+        Assert.AreEqual("", NameChoose._dogName);
     }
 
 }
