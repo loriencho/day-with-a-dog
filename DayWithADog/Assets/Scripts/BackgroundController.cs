@@ -6,6 +6,10 @@ using UnityEngine.UI;
 public class BackgroundController : MonoBehaviour
 {
 
+
+    [SerializeField]
+    GameEvent changeLocationEvent;
+
     [SerializeField]
     private Image backgroundImage;
 
@@ -15,6 +19,9 @@ public class BackgroundController : MonoBehaviour
 
     private int index = 0;
 
+    private static string _background;
+    public static string Background {get {return _background;}}
+
     // Start is called before the first frame update
     void Start()
     {  
@@ -22,19 +29,24 @@ public class BackgroundController : MonoBehaviour
             backgrounds.Add(_backgrounds[i].name, _backgrounds[i]);
         }
 
-        setBackgroundString("bg");
-    
+        setBackgroundString("bg");    
     }
 
     public void setBackgroundString(string backgroundName){
         backgroundImage.sprite = backgrounds[backgroundName];
+        updateLocation();
+    }
+
+    private void updateLocation(){
+        _background = backgroundImage.sprite.name;
+        changeLocationEvent.Raise();    
     }
 
     public void increaseBackground(){
         index = ( index + 1 ) % (_backgrounds.Count-1);
         backgroundImage.sprite = _backgrounds[index];
-        GameManager.changeLocation(backgroundImage.sprite.name);
-
+        
+        updateLocation();
     }
 
     public void decreaseBackground(){
@@ -42,7 +54,7 @@ public class BackgroundController : MonoBehaviour
         if (index < 0)
             index = _backgrounds.Count - 2;
         backgroundImage.sprite = _backgrounds[index];
-        GameManager.changeLocation(backgroundImage.sprite.name);
 
+        updateLocation();
     }
 }

@@ -3,17 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DogBehavior : MonoBehaviour
-{
-    enum BehaviorState{
-        Idle = 1,
-        Comb = 2,
-        Feed = 3,
-        Play = 4
-    }
-
-    private int numIdleActions;
-    private BehaviorState behaviorState;
+public class DogBehavior : MonoBehaviour {
+    private bool isIdle;
     private bool idleMoving;
     private int movingDirection;
     private const int Right = 1;
@@ -25,9 +16,13 @@ public class DogBehavior : MonoBehaviour
     [SerializeField]
     private List<Sprite> _sprites;
     private Dictionary<string, Sprite> sprites = new Dictionary<string, Sprite>();
+    [SerializeField]
+    private List<DogAction> dogActionsToDo;
+    [SerializeField]
+    private GameEvent allActionsDone;
 
     void Start(){
-        behaviorState = BehaviorState.Idle;
+        isIdle = true;
         idleMoving = true; 
         movingDirection = Random.Range(1, 3);
         for (int i = 0; i< _sprites.Count; i++){
@@ -69,11 +64,28 @@ public class DogBehavior : MonoBehaviour
     }
 
     void FixedUpdate(){
-
-        if (behaviorState == BehaviorState.Idle){
+        if (isIdle){
             Idle();
         }
-
     }       
+
+    public void Act(DogAction dogAction){
+        isIdle = false;
+        image.sprite = sprites["dog_idle"];
+        dogAction.Act();
+        StartCoroutine(FinishDogAction(dogAction));
+
+    }
+
+    IEnumerator FinishDogAction(DogAction dogAction){
+        yield return new WaitForSeconds(2f);
+        isIdle = true;
+        GameObject.Find(dogAction.actionItemName).SetActive(false);
+        dogActionsToDo.Remove(dogAction);
+
+        if(dogActionsToDo.Count == 0){
+            allActionsDone.Raise();
+        }
+    }
     
 }
