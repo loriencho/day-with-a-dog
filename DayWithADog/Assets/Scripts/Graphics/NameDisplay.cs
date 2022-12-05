@@ -9,6 +9,6 @@ public class NameDisplay : MonoBehaviour
     TextMeshProUGUI TMP;
 
     void OnEnable(){
-        TMP.text = GameManager.DogName;        
+        TMP.text = NameChoose.DogName;        
     }
 }
